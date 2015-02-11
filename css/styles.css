@@ -1,0 +1,106 @@
+/* basic page styling */
+
+body {
+	font-family: sans-serif, Helvetica;
+}
+
+.page {
+	width: 75%;
+	margin: 0 auto;
+	padding: 10px;
+}
+
+.page a {
+	color: #459ad3;
+	text-decoration: none;
+}
+.page a:hover {
+	text-decoration: underline;
+}
+
+.header {
+	padding: 15px;
+	margin: 10px 4px 10px 4px;
+	border-bottom: 3px solid #000;
+}
+
+.header h1, h3 {
+	display: inline;
+}
+
+.font-smoothen {
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.header .muted {
+	color: #b9b9b9;
+}
+
+.treeview-container {
+	border: 1px solid #f6f6f6;
+}
+.explorer {
+	margin-top: 1.0em;
+}
+.explorer>.treeview-container, #samplesTree {
+	height: 300px;
+}
+.explorer .content {
+	height: 300px;
+	overflow-y: scroll;
+}
+.explorer > .treeview-container {
+	float: left;
+	width: 23.74%;
+}
+section h3 {
+	font-weight: normal;
+}
+.side-container {
+	overflow-x: scroll;
+}
+
+.side-container ul li{
+	float: left;
+	list-style: none;
+	padding: 10px;
+}
+
+.content {
+	margin-top: -1%;
+}
+
+.page section {
+	padding: 10px;
+}
+
+section.footer {
+	border-top: 3px solid #000;
+	overflow: hidden;
+}
+
+.pull-right {
+	float: right;
+}
+.pull-left {
+	float: left;
+}
+
+.page .btn {
+	font-size: 100%;
+	padding: .5em 1em;
+	color: #444;
+	color: rgba(0,0,0,.8);
+	border: 1px solid #999;
+	border: 0 rgba(0,0,0,0);
+	background-color: #E6E6E6;
+	text-decoration: none;
+	border-radius: 2px;
+	margin-bottom: 10px;
+	cursor: pointer;
+}
+
+.side-container .content div {
+	display: none;
+}

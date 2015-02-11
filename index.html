@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TreeViewJS</title>
+	<!-- page styling -->
+	<link rel="stylesheet" href="css/styles.css">
+	<!-- TreeJS required styling -->
+	<link rel="stylesheet" href="css/tree.css">
+
+	<!-- just for code-sample highlighting -->
+	<link rel="stylesheet" href="css/prism.css">
+	<!-- custom treeview styling sample -->
+	<link rel="stylesheet" href="css/customTree.css">
+</head>
+<body>
+	<div class="page">
+		<div class="header">
+			<h1>TreeViewJS <h3 class="muted font-smoothen"> the pine of JS</h3></h1>
+		</div>
+
+		<section>
+			<div>
+				<h3>TreeViewJS is a simple, easy to use and customizable jQuery treeView plugin.</h3>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading font-smoothen">Simple Demo</h2>
+			<p class="description">Click on the arrows to expand/collapse the items. Treeview is built from simple list tags.</p>
+			<div class="treeview-container">
+				<ul class="treeview">
+					<li>
+						item 1
+						<ul>
+							<li>subitem 1</li>
+							<li>subitem 2</li>
+						</ul>
+					</li>
+					<li>Foo Item</li>
+					<li>
+						Countries
+						<ul>
+							<li>United States
+								<ul>
+									<li>New York</li>
+									<li>San Francisco</li>
+									<li>Chicago</li>
+									<li>Los Angeles</li>
+								</ul>
+							</li>
+							<li>United Kingdom</li>
+							<li>China</li>
+							<li>India
+								<ul>
+									<li>New Delhi</li>
+									<li>Mumbai</li>
+									<li>Chennai</li>
+									<li>Kolkata</li>
+								</ul>
+							</li>
+							<li>Russia</li>
+							<li>France</li>
+							<li>Germany</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading">Hover Effect</h2>
+			<p class="description">Change background color on mouse hover</p>
+			<div class="treeview-container">
+				<ul class="treeview">
+					<li>
+						<span>Item 1</span>
+						<ul>
+							<li>Sub Item 1</li>
+							<li>Sub Item 2</li>
+						</ul>
+					</li>
+					<li><span>Item 2</span></li>
+					<li>
+						<span>Item 3</span>
+						<ul>
+							<li>Sub Item 1</li>
+							<li>Sub Item 2</li>
+						</ul>
+					</li>
+					<li><span>Item 4</span></li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading font-smoothen">Custom Icons</h2>
+			<p class="description">Custom Expand / Collapse Icons</p>
+			<div class="treeview-container">
+				<ul id="iconTree" class="treeview">
+					<li>Item 1
+					<ul>
+						<li>Sub Item 1</li>
+						<li>Sub Item 2</li>
+						<li>Sub Item 3</li>
+					</ul></li>
+					<li>Item 2</li>
+					<li>Item 3 <ul>
+						<li>Sub Item 1</li>
+						<li>Sub Item 2</li>
+					</ul></li>
+					<li>Item 4</li>
+					<li>Item 5</li>
+				</ul>
+			</div>
+		</section>
+
+		<section>
+			<h2 class="section-heading">Functions</h2>
+			<p class="description">Some basics javascript/jQuery functions</p>
+			<pre><code class="language-javascript">$('.treeview').treeView('expandAll');</code></pre>
+			<p class="description">Expands all the nodes of treeviews using the selector i.e. class name treeview in ths case</p>
+			<button class="btn btn-expand">Expand All</button>
+			<pre><code class="language-javascript">$('.treeview').treeView('collapseAll');</code></pre>
+			<p class="description">Collapses all the nodes of treeviews using the selector i.e. class name treeview in ths case</p>
+			<button class="btn btn-collapse">Collapse All</button>
+		</section>
+
+		<section>
+			<h2 class="section-heading font-smoothen">Quick Start</h2>
+			<p class="description">Some code to quick start with TreeView. Note that the treeview was expnded on load using the <code class="language-css">expanded-items</code> class added along with the <code class="language-css">treeview</code> code</p>
+			<div class="explorer">
+				<div class="treeview-container">
+					<ul id="samplesTree" class="treeview expanded-items">
+						<li>Start
+							<ul style="display: block;">
+								<li>HTML</li>
+								<li>CSS</li>
+								<li>JS</li>
+							</ul>
+						</li>
+					</ul>
+				</div>
+				<div class="side-container">
+					<div class="content">
+						<div style="display:block" class="HTML">
+							<pre>
+								<code class="language-markup"> 
+&lt;ul class=&quot;treeview&quot;&gt;
+	&lt;li&gt;Root
+		&lt;ul&gt;
+			&lt;li&gt;Child 1&lt;/li&gt;
+			&lt;li&gt;Child 2&lt;/li&gt;
+			&lt;li&gt;Child 3&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+	&lt;li&gt;Root 2
+		&lt;ul&gt;
+			&lt;li&gt;Child 1
+				&lt;ul&gt;
+					&lt;li&gt;GrandChild 1&lt;/li&gt;
+					&lt;li&gt;GrandChild 2&lt;/li&gt;
+					&lt;li&gt;GrandChild 3&lt;/li&gt;
+				&lt;/ul&gt;&lt;/li&gt;
+			&lt;li&gt;Child 2
+				&lt;ul&gt;
+					&lt;li&gt;GrandChild 1&lt;/li&gt;
+					&lt;li&gt;GrandChild 2&lt;/li&gt;
+					&lt;li&gt;GrandChild 3&lt;/li&gt;
+				&lt;/ul&gt;&lt;/li&gt;
+			&lt;li&gt;Child 3
+				&lt;ul&gt;
+					&lt;li&gt;GrandChild 1&lt;/li&gt;
+					&lt;li&gt;GrandChild 2&lt;/li&gt;
+					&lt;li&gt;GrandChild 3&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/li&gt;
+		&lt;/ul&gt;
+	&lt;/li&gt;
+&lt;/ul&gt;
+								</code>
+							</pre>
+						</div>
+						<div class="CSS">
+							<pre>
+								<code class="language-css">/* TreeJS styling */
+
+.treeview, .treeview ul {
+	list-style-type: none;
+	overflow: scroll;
+}
+
+.treeview li {
+	text-indent: 1%;
+	margin-top:0.2em;
+	padding:0.15em 0 0.5em 1.5em;
+	line-height: 22px;
+}
+
+.treeview li.contains-items {
+	padding:0.15em 0 0.5em 1.5em;
+	background-repeat:no-repeat;
+	background-image: url('icons/arrow-left.png');
+}
+
+.treeview li.items-expanded {
+	background-image: url('icons/arrow-down.png');
+}
+
+.treeview>li:hover {
+	cursor: pointer;
+}
+</code>
+							</pre>
+						</div>
+						<div class="JS">
+							<pre><code class="language-javascript">$('.treeview').treeView();</code></pre>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<section class="footer">
+			<p class="pull-left">By <a href="http://github.com/samarjeet27">@samarjeet27</a></p>
+			<p class="pull-right">Fork on <a href="http://github.com/samarjeet27/treeViewjs">Github</a></p>
+		</section>
+	</div>
+
+	<!-- scripts -->
+	<script src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+	<script src="js/treeView.jquery.js"></script>
+
+	<!-- just for samples code highlight -->
+	<script src="js/prism.js"></script>
+	<!-- for samples -->
+	<script src="js/script.js"></script>
+	<script>
+	// intialise the treeView
+	$('.treeview').treeView();
+	$('.btn-expand').click(function () {
+		$('.treeview').treeView('expandAll');
+	});
+	$('.btn-collapse').click(function () {
+		$('.treeview').treeView('collapseAll');
+	})
+	</script>
+</body>
+</html>
