@@ -25,7 +25,9 @@
 .treeview>li:hover {
 	cursor: pointer;
 }
-
+.treeview span {
+	padding: 10px;
+}
 .treeview span:hover{
 	background-color: rgba(246, 246, 246, 0.7);
 }
