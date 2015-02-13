@@ -1,14 +1,15 @@
 /* custom tree icons */
 #iconTree li {
-	line-height: 20px;
+	line-height: 14px;
+	font-size: 90%;
 }
 
 #iconTree li.contains-items {
-	background-image: url('icons/d-arrow-left.png');
-	background-size: 20px 20px;
+	background-image: url('icons/expand.png');
+	background-size: 16px 16px;
 }
 
 #iconTree li.items-expanded {
-	background-image: url('icons/d-arrow-down.png');
-	background-size: 20px 20px;
+	background-image: url('icons/collapse.png');
+	background-size: 16px 16px;
 }
