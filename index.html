@@ -127,6 +127,46 @@
 		</section>
 
 		<section>
+			<h2 class="section-heading font-smoothen">Data Model</h2>
+			<p class="description">TreeViewJS supports generating a treeView from a data model if you don't plan to write some html. The following data generates the treeView below using the code -</p>
+			<pre><code class="language-javascript">$('.treeview').treeView(model);</code></pre>
+			<h2 style="font-size: 100%;" class="section-heading">Data</h2>
+			<pre><code id="treeModel" class="language-javascript">[
+    { 
+        "label" : "item1",
+        "children": []
+    },
+    {
+        "label": "item2",
+        "children": [
+            { "label":"subItem"},
+            { "label":"another subItem"},
+            { "label":"last subItem"}
+        ]
+    },
+    {
+        "label": "item3",
+        "children": [
+            { "label":"Hello"},
+            { 
+                "label":"Inner List",
+                "children": [
+                    { "label": "innerItem1" },
+                    { "label": "innerItem2" }
+                ]
+            },
+            { "label":"Bye"}
+        ]
+    }
+]
+			</code></pre>
+			<h2 style="font-size: 100%;" class="section-heading">Generated Tree</h2>
+			<div class="treeview-container">
+				<ul class="treeview" id="dataTree"></ul>
+			</div>
+		</section>
+
+		<section>
 			<h2 class="section-heading font-smoothen">Quick Start</h2>
 			<p class="description">Some code to quick start with TreeView. Note that the treeview was expnded on load using the <code class="language-css">expanded-items</code> class added along with the <code class="language-css">treeview</code> code</p>
 			<div class="explorer">
@@ -235,14 +275,19 @@
 	<!-- for samples -->
 	<script src="js/script.js"></script>
 	<script>
-	// intialise the treeView
-	$('.treeview').treeView();
+	// intialise all the treeView(s)
+	$('.treeview:not(#dataTree)').treeView();
+	// handle expand and collapse buttons
 	$('.btn-expand').click(function () {
 		$('.treeview').treeView('expandAll');
 	});
 	$('.btn-collapse').click(function () {
 		$('.treeview').treeView('collapseAll');
 	})
+	// load the data tree
+	var $dataTree = $('#dataTree');
+	var model = JSON.parse($('#treeModel').html());
+	$dataTree.treeView(model);
 	</script>
 </body>
 </html>

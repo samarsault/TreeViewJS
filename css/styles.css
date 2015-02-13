@@ -101,6 +101,10 @@ section.footer {
 	cursor: pointer;
 }
 
+p.description {
+	line-height: 150%;
+}
+
 .side-container .content div {
 	display: none;
 }
