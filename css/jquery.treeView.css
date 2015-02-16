@@ -2,7 +2,7 @@
 
 .treeview, .treeview ul {
 	list-style-type: none;
-	overflow: scroll;
+	overflow: hidden;
 }
 
 .treeview li {
