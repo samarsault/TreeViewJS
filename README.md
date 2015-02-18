@@ -3,6 +3,8 @@ TreeViewJS
 
 TreeViewJS is a simple, easy to use and customizable jQuery treeView control.
 
+<img src="http://s15.postimg.org/rjyuh87ej/treeviewjs_screenshot.png" width="400">
+
 Installation
 ---
 Install using [bower](http://bower.io)
