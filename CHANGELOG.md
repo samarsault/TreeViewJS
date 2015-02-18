@@ -2,6 +2,7 @@
 ---
 - Add more configuration options namely, ```model```, ```useSpan```, ```imageList``` and ```expanded```
 - TreeNode icons
+- Fixed model buliding bug
 
 0.1.5 (Feb 13)
 ---
