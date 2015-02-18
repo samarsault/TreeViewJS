@@ -114,7 +114,13 @@
 				</ul>
 			</div>
 		</section>
-
+		<section>
+			<h2 class="section-heading">Node Icons</h2>
+			<p class="description">Icons on nodes</p>
+			<div class="treeview-container">
+				<ul id="icon-tree"></ul>
+			</div>
+		</section>
 		<section>
 			<h2 class="section-heading">Functions</h2>
 			<p class="description">Some basics javascript/jQuery functions</p>
@@ -162,7 +168,7 @@
 			</code></pre>
 			<h2 style="font-size: 100%;" class="section-heading">Generated Tree</h2>
 			<div class="treeview-container">
-				<ul class="treeview" id="dataTree"></ul>
+				<ul id="dataTree"></ul>
 			</div>
 		</section>
 
@@ -274,20 +280,5 @@
 	<script src="js/prism.js"></script>
 	<!-- for samples -->
 	<script src="js/script.js"></script>
-	<script>
-	// intialise all the treeView(s)
-	$('.treeview:not(#dataTree)').treeView();
-	// handle expand and collapse buttons
-	$('.btn-expand').click(function () {
-		$('.treeview').treeView('expandAll');
-	});
-	$('.btn-collapse').click(function () {
-		$('.treeview').treeView('collapseAll');
-	})
-	// load the data tree
-	var $dataTree = $('#dataTree');
-	var model = JSON.parse($('#treeModel').html());
-	$dataTree.treeView(model);
-	</script>
 </body>
 </html>

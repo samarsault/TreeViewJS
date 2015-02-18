@@ -24,10 +24,18 @@
 
 .treeview>li:hover {
 	cursor: pointer;
+	background-size: 24px 24px;
 }
-.treeview span {
-	padding: 10px;
+
+.treeview span.has-node-icon {
+	text-indent: 2%;
+	margin-top:0.2em;
+	padding:0.15em 0 0.5em 2.0em;
+	line-height: 22px;
+	background-repeat:no-repeat;
+	background-size: 24px 24px;
 }
-.treeview span:hover{
+
+.treeview span:not(span.has-node-icon):hover{
 	background-color: rgba(246, 246, 246, 0.7);
 }
