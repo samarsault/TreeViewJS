@@ -15,7 +15,7 @@ $('.btn-collapse').click(function () {
 })
 // load the data tree
 var $dataTree = $('#dataTree');
-var $iconTree = $('#icon-tree');
+var $iconTree = $('.icon-tree');
 var model = JSON.parse($('#treeModel').html());
 var iModel = $.extend({}, model);
 var imgs = ['css/icons/samples/folder.png', 'css/icons/samples/file.png'];
@@ -78,4 +78,7 @@ $iconTree.treeView({
 	model: iconModel,
 	imageList: imgs
 });
+
 $dataTree.treeView(model);
+
+$('.treview-dotted-lines').treeView('expandAll');

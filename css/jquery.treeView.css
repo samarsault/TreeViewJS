@@ -22,9 +22,19 @@
 	background-image: url('icons/arrow-down.png');
 }
 
+/* if you need dotted lines */
+.treview-dotted-lines li {
+	margin-top: 0.4em !important;
+}
+.treview-dotted-lines li.items-expanded li {
+	border-left: 1px dotted #444;
+	border-bottom: 1px dotted #444;
+	/* just to make it look less long */
+	width: 60%;
+}
+
 .treeview>li:hover {
 	cursor: pointer;
-	background-size: 24px 24px;
 }
 
 .treeview span.has-node-icon {
