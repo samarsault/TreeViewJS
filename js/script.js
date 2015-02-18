@@ -53,6 +53,7 @@ var iconModel = [
             },
             {
                 "label": "Inner List",
+                "imageIndex": 0,
                 "children": [
                     {
                         "label": "innerItem1",

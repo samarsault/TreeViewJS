@@ -10,8 +10,8 @@
 		// generate tree from data
 		function generateTree(data, $root, useSpan, imgList) {
 			// create a node from a node object
-			function createNode(nObj) {
-				var li = $('<li>');
+			function createNode(nObj, $target) {
+				var li = $('<li>').appendTo($target);
 				// node icons require using a span element
 				useSpan = useSpan || imgList.length > 0;
 				if (useSpan) {
@@ -29,17 +29,17 @@
 					$span.css('background-image', image);
 				}
 				if (nObj.children != undefined && nObj.children.length > 0) {
-					innerList = $('<ul>');
+					var innerList = $('<ul>').appendTo(li);
 					for (var i = 0; i < nObj.children.length; i++) {
 						var child = nObj.children[i];
-						innerList.append(createNode(child));
+						createNode(child, innerList);
 					};
-					li.append(innerList);
 				}
+				
 				return li;
 			}
 			for (var i = 0; i < data.length; i++) {
-				$root.append(createNode(data[i]));
+				createNode(data[i], $root);
 			}
 		}
 
