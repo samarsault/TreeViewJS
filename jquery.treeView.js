@@ -3,17 +3,30 @@
 	if (!$) return;
 	// treeView
 	function treeView($me) {
+		// add treeview class name if not present
+		$me.addClass('treeview');
 		// collapsable elements i.e. the li with a ul in it
 		var $collapse = $me.find('li>ul').parent();
 		// generate tree from data
-		function generateTree(data, $root, useSpan) {
+		function generateTree(data, $root, useSpan, imgList) {
 			// create a node from a node object
 			function createNode(nObj) {
 				var li = $('<li>');
+				// node icons require using a span element
+				useSpan = useSpan || imgList.length > 0;
 				if (useSpan) {
 					li.append($('<span>').text(nObj.label));
 				} else {
 					li.text(nObj.label);
+				}
+				if(imgList.length > 0){
+					// the image
+					var image = 'url('+imgList[nObj.imageIndex]+')';
+					// requires using span
+					var $span = li.find('span');
+					// indicates that it has a node image
+					$span.addClass('has-node-icon');
+					$span.css('background-image', image);
 				}
 				if (nObj.children != undefined && nObj.children.length > 0) {
 					innerList = $('<ul>');
@@ -35,9 +48,12 @@
 			init: function (data) {
 				// handle undefined error
 				data = data || { };
+
+				// default optoins
 				var defaults = {
 					model: null, // treeview data model
 					useSpan: false, // use <span> to build model
+					imageList: [], // add icons to nodes
 					// ajax: null, TODO: load data using ajax
 					expanded: false // the tree is expanded
 				};
@@ -57,7 +73,7 @@
 
 				if (options.model != null) {
 					// generate the tree
-					generateTree(options.model, $me, options.useSpan);
+					generateTree(options.model, $me, options.useSpan, options.imageList);
 					// re assign var value for new dom structure
 					$collapse = $me.find('li>ul').parent();
 				}
