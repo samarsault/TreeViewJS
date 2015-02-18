@@ -8,20 +8,20 @@
 		// collapsable elements i.e. the li with a ul in it
 		var $collapse = $me.find('li>ul').parent();
 		// generate tree from data
-		function generateTree(data, $root, useSpan, imgList) {
+		function generateTree(data, $root, options) {
 			// create a node from a node object
 			function createNode(nObj, $target) {
 				var li = $('<li>').appendTo($target);
 				// node icons require using a span element
-				useSpan = useSpan || imgList.length > 0;
+				var useSpan = options.useSpan || options.imageList.length > 0;
 				if (useSpan) {
 					li.append($('<span>').text(nObj.label));
 				} else {
 					li.text(nObj.label);
 				}
-				if(imgList.length > 0){
+				if(options.imageList.length > 0){
 					// the image
-					var image = 'url('+imgList[nObj.imageIndex]+')';
+					var image = 'url('+options.imageList[nObj.imageIndex]+')';
 					// requires using span
 					var $span = li.find('span');
 					// indicates that it has a node image
@@ -73,7 +73,7 @@
 
 				if (options.model != null) {
 					// generate the tree
-					generateTree(options.model, $me, options.useSpan, options.imageList);
+					generateTree(options.model, $me, options);
 					// re assign var value for new dom structure
 					$collapse = $me.find('li>ul').parent();
 				}
