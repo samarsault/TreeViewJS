@@ -1,15 +1,14 @@
 /* custom tree icons */
 #iconTree li {
-	line-height: 14px;
+	line-height: 15px;
 	font-size: 90%;
+	background-size: 18px 18px;
 }
 
 #iconTree li.contains-items {
 	background-image: url('icons/expand.png');
-	background-size: 16px 16px;
 }
 
 #iconTree li.items-expanded {
 	background-image: url('icons/collapse.png');
-	background-size: 16px 16px;
 }
