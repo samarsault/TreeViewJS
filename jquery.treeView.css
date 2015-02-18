@@ -1,5 +1,6 @@
-/* TreeJS styling */
+/* TreeJS Default styling */
 
+/* required */
 .treeview, .treeview ul {
 	list-style-type: none;
 	overflow: hidden;
@@ -9,11 +10,23 @@
 	text-indent: 1%;
 	margin-top:0.2em;
 	padding:0.15em 0 0.5em 1.5em;
-	line-height: 22px;
 	background-repeat:no-repeat;
+	/* adjust according to node image */
+	line-height: 22px;
 	background-size: 24px 24px;
 }
 
+.treeview span.has-node-icon {
+	text-indent: 2%;
+	margin-top:0.2em;
+	padding:0.15em 0 0.5em 2.0em;
+	background-repeat:no-repeat;
+	/* adjust according to node image */
+	line-height: 22px;
+	background-size: 24px 24px;
+}
+
+/* node icons */
 .treeview li.contains-items {
 	background-image: url('icons/arrow-left.png');
 } 
@@ -22,20 +35,12 @@
 	background-image: url('icons/arrow-down.png');
 }
 
+/* optional hand cursor */
 .treeview>li:hover {
 	cursor: pointer;
-	background-size: 24px 24px;
 }
 
-.treeview span.has-node-icon {
-	text-indent: 2%;
-	margin-top:0.2em;
-	padding:0.15em 0 0.5em 2.0em;
-	line-height: 22px;
-	background-repeat:no-repeat;
-	background-size: 24px 24px;
-}
-
+/* optional hover */
 .treeview span:not(span.has-node-icon):hover{
 	background-color: rgba(246, 246, 246, 0.7);
 }
