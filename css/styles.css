@@ -108,3 +108,10 @@ p.description {
 .side-container .content div {
 	display: none;
 }
+
+/* responsive styling */
+@media (max-width: 767px) {
+	.page {
+		width: 95%;
+	}
+}
