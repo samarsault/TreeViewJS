@@ -35,7 +35,9 @@
 	background-repeat:no-repeat;
 	background-size: 24px 24px;
 }
-
-.treeview span:not(span.has-node-icon):hover{
+.treeview span {
+	padding: 5px;
+}
+.treeview span:not(.has-node-icon):hover{
 	background-color: rgba(246, 246, 246, 0.7);
 }
