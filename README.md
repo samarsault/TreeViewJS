@@ -13,7 +13,7 @@ $ bower install treeviewjs --save
 ```
 Demo
 ---
-Demo and instructions can be found here - http://samarjeet27.github.io/TreeViewJS
+Demo and instructions can be found here - http://samarsault.github.io/TreeViewJS
 
 
 Quick Start
@@ -22,5 +22,5 @@ Master branch contains a basic setup of the latest TreeViewJS version, while [gh
 
 So, download or clone the master branch of this repo to easily get started, or see the [site][1] for more details. You can also see [this][2] for the source of the site and more examples
 
-[1]:http://samarjeet27.github.io/TreeViewJS
-[2]:https://github.com/samarjeet27/TreeViewJS/tree/gh-pages
+[1]:http://samarsault.github.io/TreeViewJS
+[2]:https://github.com/samarsault/TreeViewJS/tree/gh-pages
